@@ -47,6 +47,16 @@ describe("Game", function() {
         expect(game.isSecondRowComplete()).toEqual(true);
       });
     })
+
+    describe ("Third row", function() {
+      it("returns true if all are X", function() {
+        game.board.fields[6] = "X";
+        game.board.fields[7] = "X";
+        game.board.fields[8] = "X";
+        expect(game.isThirdRowComplete()).toEqual(true);
+      });
+    })
+
   });
 
 });
