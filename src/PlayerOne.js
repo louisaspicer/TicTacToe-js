@@ -2,6 +2,7 @@
 
   function PlayerOne() {
     this.type = null;
+    this.turn = true;
   }
 
   PlayerOne.prototype = {
