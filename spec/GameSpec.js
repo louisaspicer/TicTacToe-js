@@ -57,6 +57,15 @@ describe("Game", function() {
       });
     })
 
+    describe ("First column", function() {
+      it("returns true if all are X", function() {
+        game.board.fields[0] = "X";
+        game.board.fields[3] = "X";
+        game.board.fields[6] = "X";
+        expect(game.isFirstColumnComplete()).toEqual(true);
+      });
+    })
+
   });
 
 });
