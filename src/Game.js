@@ -6,49 +6,61 @@
   }
 
   Game.prototype = {
-    isFirstRowComplete: function() {
+
+    runChecks: function() {
+      return this._isFirstRowComplete() ||
+      this._isSecondRowComplete() ||
+      this._isThirdRowComplete() ||
+      this._isFirstColumnComplete() ||
+      this._isSecondColumnComplete() ||
+      this._isThirdColumnComplete() ||
+      this._isDiagonalLeftToRightComplete() ||
+      this._isDiagonalRightToLeftComplete();
+    },
+
+    _isFirstRowComplete: function() {
       return this._options.indexOf(this.board.fields[0]) > -1 &&
       this._options.indexOf(this.board.fields[1]) > -1 &&
       this._options.indexOf(this.board.fields[2]) > -1;
     },
 
-    isSecondRowComplete: function() {
+    _isSecondRowComplete: function() {
       return this._options.indexOf(this.board.fields[3]) > -1 &&
       this._options.indexOf(this.board.fields[4]) > -1 &&
       this._options.indexOf(this.board.fields[5]) > -1;
     },
 
-    isThirdRowComplete: function() {
+    _isThirdRowComplete: function() {
       return this._options.indexOf(this.board.fields[6]) > -1 &&
       this._options.indexOf(this.board.fields[7]) > -1 &&
       this._options.indexOf(this.board.fields[8]) > -1;
     },
 
-    isFirstColumnComplete: function() {
+    _isFirstColumnComplete: function() {
       return this._options.indexOf(this.board.fields[0]) > -1 &&
       this._options.indexOf(this.board.fields[3]) > -1 &&
       this._options.indexOf(this.board.fields[6]) > -1;
     },
 
-    isSecondColumnComplete: function() {
+    _isSecondColumnComplete: function() {
       return this._options.indexOf(this.board.fields[1]) > -1 &&
       this._options.indexOf(this.board.fields[4]) > -1 &&
       this._options.indexOf(this.board.fields[7]) > -1;
     },
 
-    isThirdColumnComplete: function() {
+    _isThirdColumnComplete: function() {
       return this._options.indexOf(this.board.fields[2]) > -1 &&
       this._options.indexOf(this.board.fields[5]) > -1 &&
       this._options.indexOf(this.board.fields[8]) > -1;
     },
 
-    isDiagonalLeftToRightComplete: function() {
+    _isDiagonalLeftToRightComplete: function() {
       return this._options.indexOf(this.board.fields[0]) > -1 &&
       this._options.indexOf(this.board.fields[4]) > -1 &&
       this._options.indexOf(this.board.fields[8]) > -1;
     },
 
-    isDiagonalRightToLeftComplete: function() {
+    _isDiagonalRightToLeftComplete: function() {
       return this._options.indexOf(this.board.fields[2]) > -1 &&
       this._options.indexOf(this.board.fields[4]) > -1 &&
       this._options.indexOf(this.board.fields[6]) > -1;
