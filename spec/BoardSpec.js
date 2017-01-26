@@ -1,4 +1,4 @@
-describe("Boards", function() {
+describe("Board", function() {
 
   var board;
 
