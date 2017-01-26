@@ -6,7 +6,9 @@
 
   Game.prototype = {
     checkFirstRow: function() {
-      return false
+      return this.board.fields[0] === "X" &&
+      this.board.fields[1] === "X" &&
+      this.board.fields[2] === "X";
     }
   }
 
