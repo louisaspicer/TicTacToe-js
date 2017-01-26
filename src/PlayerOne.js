@@ -15,7 +15,7 @@
       board.fields[field] = this.type;
       this.turn = false;
     },
-  }
+  };
 
   exports.PlayerOne = PlayerOne;
 
