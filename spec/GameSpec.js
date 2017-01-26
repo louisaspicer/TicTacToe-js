@@ -13,22 +13,30 @@ describe("Game", function() {
   });
 
   describe("Checking the board", function() {
-    it("checks the first row of board", function() {
-      expect(game.isFirstRowComplete()).toEqual(false);
-    });
 
-    it("checks the first row of board match for X", function() {
-      game.board.fields[0] = "X";
-      game.board.fields[1] = "X";
-      game.board.fields[2] = "X";
-      expect(game.isFirstRowComplete()).toEqual(true);
-    });
+    describe("First row", function() {
+      it("returns false if theres no match", function() {
+        expect(game.isFirstRowComplete()).toEqual(false);
+      });
 
-    it("checks the first row of the board match for O", function() {
-      game.board.fields[0] = "O";
-      game.board.fields[1] = "O";
-      game.board.fields[2] = "O";
-      expect(game.isFirstRowComplete()).toEqual(true);
+      it("returns true if all are X", function() {
+        game.board.fields[0] = "X";
+        game.board.fields[1] = "X";
+        game.board.fields[2] = "X";
+        expect(game.isFirstRowComplete()).toEqual(true);
+      });
+
+      it("returns true if all are O", function() {
+        game.board.fields[0] = "O";
+        game.board.fields[1] = "O";
+        game.board.fields[2] = "O";
+        expect(game.isFirstRowComplete()).toEqual(true);
+      });
+
+      it("returns false if not all match", function() {
+        game.board.fields[0] = "O";
+        expect(game.isFirstRowComplete()).toEqual(false);
+      });
     });
   });
 
