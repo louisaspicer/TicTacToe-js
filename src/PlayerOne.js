@@ -11,6 +11,9 @@
       this.type = type;
     },
 
+    playTurn: function(field, board) {
+      board.fields[field] = this.type;
+    },
   }
 
   exports.PlayerOne = PlayerOne;

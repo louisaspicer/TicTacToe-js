@@ -7,10 +7,10 @@ describe("Boards", function() {
   });
 
   it("initializes with a top left field set to null", function() {
-    expect(board.topLeft).toEqual(null);
+    expect(board.fields[1]).toEqual(null);
   });
 
   it("initializes with a middle middle field set to null", function() {
-    expect(board.topLeft).toEqual(null);
+    expect(board.fields[2]).toEqual(null);
   });
 });

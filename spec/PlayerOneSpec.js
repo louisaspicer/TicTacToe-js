@@ -26,24 +26,12 @@ describe("Player One", function() {
     });
 
     it("can update the board object", function() {
-      var board = {
-        topLeft: null,
-        topMiddle: null,
-        topRight: null,
-        middleLeft: null,
-        middleMiddle: null,
-        middleRight: null,
-        bottomLeft: null,
-        bottomMiddle: null,
-        bottomRight: null,
-      };
-      playerOne.play("topLeft", board);
-      expect(board.topLeft).not.toBeNull();
+      var board = {fields: [null, null, null]};
+      playerOne.pickType("O");
+      playerOne.playTurn(1, board);
+      expect(board.fields[1]).not.toBeNull();
     });
 
-    // it("user can play a field", function() {
-    //   expect(playerOne.play(topLeft)).
-    // });
 
   });
 
