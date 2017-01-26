@@ -46,7 +46,7 @@ describe("Game", function() {
         game.board.fields[5] = "X";
         expect(game.isSecondRowComplete()).toEqual(true);
       });
-    })
+    });
 
     describe ("Third row", function() {
       it("returns true if all are X", function() {
@@ -55,7 +55,7 @@ describe("Game", function() {
         game.board.fields[8] = "X";
         expect(game.isThirdRowComplete()).toEqual(true);
       });
-    })
+    });
 
     describe ("First column", function() {
       it("returns true if all are X", function() {
@@ -64,7 +64,7 @@ describe("Game", function() {
         game.board.fields[6] = "X";
         expect(game.isFirstColumnComplete()).toEqual(true);
       });
-    })
+    });
 
     describe ("Second column", function() {
       it("returns true if all are X", function() {
@@ -73,7 +73,7 @@ describe("Game", function() {
         game.board.fields[7] = "X";
         expect(game.isSecondColumnComplete()).toEqual(true);
       });
-    })
+    });
 
     describe ("Third column", function() {
       it("returns true if all are X", function() {
@@ -82,7 +82,16 @@ describe("Game", function() {
         game.board.fields[8] = "X";
         expect(game.isThirdColumnComplete()).toEqual(true);
       });
-    })
+    });
+
+    describe ("Diagonals", function() {
+      it("returns true if all from top left to bottom right are X", function() {
+        game.board.fields[0] = "X";
+        game.board.fields[4] = "X";
+        game.board.fields[7] = "X";
+        expect(game.isDiagonalLeftToRightComplete()).toEqual(true);
+      });
+    });
 
   });
 

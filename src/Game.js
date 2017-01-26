@@ -40,6 +40,12 @@
       return this._options.indexOf(this.board.fields[2]) > -1 &&
       this._options.indexOf(this.board.fields[5]) > -1 &&
       this._options.indexOf(this.board.fields[8]) > -1;
+    },
+
+    isDiagonalLeftToRightComplete: function() {
+      return this._options.indexOf(this.board.fields[0]) > -1 &&
+      this._options.indexOf(this.board.fields[4]) > -1 &&
+      this._options.indexOf(this.board.fields[7]) > -1;
     }
 
   }
