@@ -8,6 +8,16 @@
   }
 
   Game.prototype = {
+
+    clickNought: function() {
+      var nought = document.getElementById("O");
+      nought.addEventListener("click", function() {
+        this.pickTypeForPlayerOne("O");
+        this.setTypeForPlayerTwo("X");
+      });
+    },
+
+
     pickTypeForPlayerOne: function(type) {
       this.playerOne.pickType(type);
     },

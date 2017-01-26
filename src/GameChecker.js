@@ -98,7 +98,7 @@
       }
     }
 
-  }
+  };
 
   exports.GameChecker = GameChecker;
 
