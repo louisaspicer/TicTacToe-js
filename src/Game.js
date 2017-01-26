@@ -21,6 +21,7 @@
         this.playerOne.playTurn(idForImgClick, this.board);
       } else {
         this.playerTwo.playTurn(idForImgClick, this.board);
+        this.playerOne.turn = true;
       }
     },
 
