@@ -20,4 +20,10 @@ describe("Game", function() {
     expect(game.playerTwo.pickType).toHaveBeenCalledWith("O");
   });
 
+  it("returns if player one or two has won", function() {
+    gameChecker.runChecks.and.returnValue("X");
+    game.playerOne.type = "X";
+    expect(game.runChecks()).toEqual("Player 1 is the winner!");
+  });
+
 });
