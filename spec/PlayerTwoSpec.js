@@ -13,10 +13,23 @@ describe("Player Two", function() {
   });
 
   describe("user playing", function() {
-    it("can set the players type", function() {
+
+    var board;
+
+    beforeEach(function() {
       playerTwo.pickType("X");
+      board = {fields: [null, null, null]};
+    });
+
+    it("can set the players type", function() {
       expect(playerTwo.type).toEqual("X");
     });
+
+    it("can update the board object", function() {
+      playerTwo.playTurn(1, board);
+      expect(board.fields[1]).not.toBeNull();
+    });
+
   });
 
 });
