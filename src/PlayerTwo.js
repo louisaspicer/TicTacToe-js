@@ -12,7 +12,6 @@
 
     playTurn: function(field, board) {
       board.fields[field] = this.type;
-      console.log(board.fields[field]);
     },
   };
 

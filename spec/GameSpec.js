@@ -4,8 +4,8 @@ describe("Game", function() {
 
   beforeEach(function() {
     board = jasmine.createSpyObj("board", ["fields"]);
-    playerOne = jasmine.createSpyObj("playerOne", ["pickType", "type"]);
-    playerTwo = jasmine.createSpyObj("playerTwo", ["pickType"]);
+    playerOne = jasmine.createSpyObj("playerOne", ["pickType", "type", "playTurn"]);
+    playerTwo = jasmine.createSpyObj("playerTwo", ["pickType", "playTurn"]);
     gameChecker = jasmine.createSpyObj("gameChecker", ["runChecks"]);
     game = new Game(board, playerOne, playerTwo, gameChecker);
   });
@@ -24,6 +24,18 @@ describe("Game", function() {
     gameChecker.runChecks.and.returnValue("X");
     game.playerOne.type = "X";
     expect(game.runChecks()).toEqual("Player 1 is the winner!");
+  });
+
+  it("plays for player two if player one's turn is false", function() {
+    game.playerOne.turn = false;
+    game.playTurn(1);
+    expect(game.playerTwo.playTurn).toHaveBeenCalled();
+  });
+
+  it("plays for player one if player one's turn is true", function() {
+    game.playerOne.turn = true;
+    game.playTurn(1);
+    expect(game.playerOne.playTurn).toHaveBeenCalled();
   });
 
 });

@@ -13,7 +13,15 @@
     },
 
     setTypeForPlayerTwo: function(type) {
-        this.playerTwo.pickType(type);
+      this.playerTwo.pickType(type);
+    },
+
+    playTurn: function(idForImgClick) {
+      if (this.playerOne.turn) {
+        this.playerOne.playTurn(idForImgClick, this.board);
+      } else {
+        this.playerTwo.playTurn(idForImgClick, this.board);
+      }
     },
 
     runChecks: function() {
