@@ -7,7 +7,7 @@ describe("Player One", function() {
   });
 
   it("user can choose to be either the nought or the cross", function() {
-    playerOne.pickType(O);
-    expect(playerOne.type).toEqual(O);
+    playerOne.pickType("O");
+    expect(playerOne.type).toEqual("O");
   });
 });

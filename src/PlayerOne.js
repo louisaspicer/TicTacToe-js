@@ -6,6 +6,9 @@
 
   PlayerOne.prototype = {
 
+    pickType: function(type) {
+      this.type = type;
+    }
 
   }
 
