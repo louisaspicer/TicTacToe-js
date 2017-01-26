@@ -13,6 +13,7 @@
 
     playTurn: function(field, board) {
       board.fields[field] = this.type;
+      this.turn = false;
     },
   }
 

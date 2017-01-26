@@ -20,16 +20,25 @@ describe("Player One", function() {
 
   describe("user playing", function() {
 
-    it("can choose to be either the nought or the cross", function() {
+    var board;
+
+    beforeEach(function() {
       playerOne.pickType("O");
+      board = {fields: [null, null, null]};
+    });
+
+    it("can choose to be either the nought or the cross", function() {
       expect(playerOne.type).toEqual("O");
     });
 
     it("can update the board object", function() {
-      var board = {fields: [null, null, null]};
-      playerOne.pickType("O");
       playerOne.playTurn(1, board);
       expect(board.fields[1]).not.toBeNull();
+    });
+
+    it("once player has played, turn is set to false", function() {
+      playerOne.playTurn(1, board);
+      expect(playerOne.turn).not.toBeTruthy();
     });
 
 
