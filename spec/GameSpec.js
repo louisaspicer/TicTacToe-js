@@ -9,16 +9,7 @@ describe("Game", function() {
   });
 
   it("initalizes a new board", function() {
-    board.fields.and.returnValue([
-      null, null, null,
-      null, null, null,
-      null, null, null
-    ]);
-    expect(game.board).toEqual([
-      null, null, null,
-      null, null, null,
-      null, null, null
-    ]);
+    expect(game.board).toEqual(board);
   });
 
 });
