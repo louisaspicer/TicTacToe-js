@@ -1,6 +1,6 @@
 (function(exports) {
 
-  function Fields() {
+  function Board() {
     this.topLeft = null;
     this.topMiddle = null;
     this.topRight = null;
@@ -12,6 +12,6 @@
     this.bottomRight = null;
   }
 
-  exports.Fields = Fields;
+  exports.Board = Board;
 
 })(this);

@@ -1,16 +1,16 @@
-describe("Fields", function() {
+describe("Boards", function() {
 
-  var fields;
+  var board;
 
   beforeEach(function() {
-    fields = new Fields();
+    board = new Board();
   });
 
   it("initializes with a top left field set to null", function() {
-    expect(fields.topLeft).toEqual(null);
+    expect(board.topLeft).toEqual(null);
   });
 
   it("initializes with a middle middle field set to null", function() {
-    expect(fields.topLeft).toEqual(null);
+    expect(board.topLeft).toEqual(null);
   });
 });
