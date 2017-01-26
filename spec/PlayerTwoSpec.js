@@ -12,4 +12,11 @@ describe("Player Two", function() {
     });
   });
 
+  describe("user playing", function() {
+    it("can set the players type", function() {
+      playerTwo.pickType("X");
+      expect(playerTwo.type).toEqual("X");
+    });
+  });
+
 });
