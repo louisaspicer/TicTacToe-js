@@ -88,8 +88,15 @@ describe("Game", function() {
       it("returns true if all from top left to bottom right are X", function() {
         game.board.fields[0] = "X";
         game.board.fields[4] = "X";
-        game.board.fields[7] = "X";
+        game.board.fields[8] = "X";
         expect(game.isDiagonalLeftToRightComplete()).toEqual(true);
+      });
+
+      it("returns true if all from top right to bottom left are X", function() {
+        game.board.fields[2] = "X";
+        game.board.fields[4] = "X";
+        game.board.fields[6] = "X";
+        expect(game.isDiagonalRightToLeftComplete()).toEqual(true);
       });
     });
 
