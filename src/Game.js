@@ -10,7 +10,14 @@
       return this._options.indexOf(this.board.fields[0]) > -1 &&
       this._options.indexOf(this.board.fields[1]) > -1 &&
       this._options.indexOf(this.board.fields[2]) > -1;
-    }
+    },
+
+    isSecondRowComplete: function() {
+      return this._options.indexOf(this.board.fields[3]) > -1 &&
+      this._options.indexOf(this.board.fields[4]) > -1 &&
+      this._options.indexOf(this.board.fields[5]) > -1;
+    },
+
   }
 
   exports.Game = Game;

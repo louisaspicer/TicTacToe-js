@@ -38,6 +38,15 @@ describe("Game", function() {
         expect(game.isFirstRowComplete()).toEqual(false);
       });
     });
+
+    describe ("Second row", function() {
+      it("returns true if all are X", function() {
+        game.board.fields[3] = "X";
+        game.board.fields[4] = "X";
+        game.board.fields[5] = "X";
+        expect(game.isSecondRowComplete()).toEqual(true);
+      });
+    })
   });
 
 });
