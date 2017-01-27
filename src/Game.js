@@ -11,9 +11,14 @@
 
     clickNought: function() {
       var nought = document.getElementById("O");
+      var board = document.getElementById("board");
+      var choices = document.getElementById("choices");
+      self = this;
       nought.addEventListener("click", function() {
-        this.pickTypeForPlayerOne("O");
-        this.setTypeForPlayerTwo("X");
+        self.pickTypeForPlayerOne("O");
+        self.setTypeForPlayerTwo("X");
+        board.style.display = block;
+        choices.style.display = none;
       });
     },
 
@@ -45,9 +50,7 @@
         }
       }
     },
-
   };
-
 
   exports.Game = Game;
 

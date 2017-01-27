@@ -7,13 +7,111 @@
     <script src="src/GameChecker.js"></script>
     <script src="src/PlayerOne.js"></script>
     <script src="src/PlayerTwo.js"></script>
-    <script src="index.js"></script>
+    <script src="src/Game.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <style>
+      table, th, td {
+        border: 5px solid black;
+        border-collapse: collapse;
+      }
+
+      td.container {
+        height: 150px;
+        width: 150px;
+      }
+
+      #board {
+        display: none;
+      }
+
+      #choices {
+        display: block;
+      }
+    </style>
   </head>
     <body>
-      <div id="app">hello</div>
       <center>
-        <a href="#play"><img id="O" src="resources/images/nought.jpg" alt="Nought" style="width:150px;height:150px;"></a>
-        <a href="#play"><img id="X" src="resources/images/cross.jpg" alt="Cross" style="width:150px;height:150px;"></a>
+        <div id="app">
+          <div id="choices">
+            <h1>PLAYER ONE - choose your marker:</h1>
+            <a href="#play"><img id="O" src="resources/images/nought.jpg" alt="Nought" style="width:150px;height:150px;"></a>
+            <a href="#play"><img id="X" src="resources/images/cross.jpg" alt="Cross" style="width:150px;height:150px;"></a>
+          </div>
+          <div id="board">
+            <table style="width:50%">
+              <tr>
+                <td class="container">
+                  <center>
+                    <a href="#0">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#1">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#2">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td class="container">
+                  <center>
+                    <a href="#3">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#4">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#5">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td class="container">
+                  <center>
+                    <a href="#6">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#7">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+                <td class="container">
+                  <center>
+                    <a href="#8">
+                      <img id="0" src="resources/images/blank.jpg" style="width:150px;height:150px;">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
       </center>
     </body>
 </html>
