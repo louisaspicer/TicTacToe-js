@@ -1,0 +1,29 @@
+table, th, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+}
+
+td.container {
+  height: 150px;
+  width: 150px;
+}
+
+#board {
+  display: none;
+}
+
+#choices {
+  display: block;
+}
+
+#X, #O {
+  font-size: 150px;
+  width: 150px;
+  height: 150px;
+  display:inline;
+}
+
+a {
+  text-decoration:none;
+  margin-right:20px;
+}

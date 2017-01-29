@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="resources/css/layout.css" type="text/css">
     <script src="src/Board.js"></script>
     <script src="src/GameChecker.js"></script>
     <script src="src/PlayerOne.js"></script>
@@ -10,33 +11,19 @@
     <script src="src/Game.js"></script>
     <script src="src/GameView.js"></script>
     <script src="index.js"></script>
-    <style>
-      table, th, td {
-        border: 5px solid black;
-        border-collapse: collapse;
-      }
-
-      td.container {
-        height: 150px;
-        width: 150px;
-      }
-
-      #board {
-        display: none;
-      }
-
-      #choices {
-        display: block;
-      }
-    </style>
   </head>
     <body>
       <center>
-        <div id="app">
-          <div id="choices">
+        <div id="app" class=wrapper>
+            <header>
+              <h1>PLAY TIC-TAC-TOE!</h1><br>
+            </header>
+            <div id="choices">
             <h1>Player One, please choose your marker:</h1>
-            <a href="#play"><p style="font-size:150px; width:150px; height:150px;" id="X">X</font></a>
-            <a href="#play"><p style="font-size:150px; width:150px; height:150px;" id="O">O</font></a>
+              <a href="#play"><p id="X">X</font></a>
+              <a href="#play"><p id="O">O</font></a>
+          </div>
+          <div id="player">
           </div>
           <div id="board">
             <table style="width:50%">

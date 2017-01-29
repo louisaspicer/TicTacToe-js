@@ -6,15 +6,6 @@
 
   GameView.prototype = {
 
-    updatePageToPlay: function() {
-      var title = document.createElement("h1");
-      var text = document.createTextNode("Play Tic-Tac-Toe!");
-      title.appendChild(text);
-      var appDiv = document.getElementById("app");
-      appDiv.insertBefore(title, appDiv.firstChild);
-      this._makeBoardAppear();
-    },
-
     addMarkerToBoard: function(marker, id) {
       element = document.createElement("h1");
       text = document.createTextNode(marker);
@@ -23,13 +14,21 @@
       field.appendChild(element);
     },
 
-    _makeBoardAppear: function() {
+    makeBoardAppear: function() {
       var board = document.getElementById("board");
       var choices = document.getElementById("choices");
       board.style.display = 'block';
       choices.style.display = 'none';
     },
 
+    showNextPlayerName: function(player) {
+      // var player = player
+      // var title = document.createElement("h1");
+      // var text = document.createTextNode(player);
+      // title.appendChild(text);
+      var name = document.getElementById("player");
+      name.innerHTML = player;
+    }
 
   };
   exports.GameView = GameView;

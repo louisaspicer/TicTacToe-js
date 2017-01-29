@@ -2,6 +2,7 @@
 
   function PlayerTwo() {
     this.type = null;
+    this.name = "Player Two"
   }
 
   PlayerTwo.prototype = {

@@ -16,7 +16,8 @@
       nought.addEventListener("click", function() {
         self.pickTypeForPlayerOne("O");
         self.setTypeForPlayerTwo("X");
-        self.gameView.updatePageToPlay();
+        self.gameView.makeBoardAppear();
+        self.gameView.showNextPlayerName(self.playerOne.name);
       });
     },
 
@@ -26,7 +27,8 @@
       cross.addEventListener("click", function() {
         self.pickTypeForPlayerOne("X");
         self.setTypeForPlayerTwo("O");
-        self.gameView.updatePageToPlay();
+        self.gameView.makeBoardAppear();
+        self.gameView.showNextPlayerName(self.playerOne.name);
       });
     },
 
@@ -50,11 +52,14 @@
     playTurn: function(id) {
       var self = this;
       if (self.playerOne.turn) {
+        console.log(self.playerOne.name)
+        self.gameView.showNextPlayerName(self.playerTwo.name);
         self.playerOne.playTurn(id, this.board);
         self.playerOne.turn = false;
         self.gameView.addMarkerToBoard(self.playerOne.type, id);
         self._runChecks();
       } else {
+        self.gameView.showNextPlayerName(self.playerOne.name);
         self.playerTwo.playTurn(id, this.board);
         self.playerOne.turn = true;
         self.gameView.addMarkerToBoard(self.playerTwo.type, id);
@@ -66,9 +71,9 @@
       if (this.gameChecker.runChecks() !== undefined) {
         var type = this.gameChecker.runChecks();
         if (type === this.playerOne.type) {
-          alert("Player 1 is the winner!");
+          console.log("Player 1 is the winner!");
         } else {
-          alert("Player 2 is the winner!");
+          console.log("Player 1 is the winner!");
         }
       }
     },

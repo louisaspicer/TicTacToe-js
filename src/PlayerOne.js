@@ -4,6 +4,7 @@
   function PlayerOne() {
     this.type = null;
     this.turn = true;
+    this.name = "Player One";
   }
 
   PlayerOne.prototype = {
