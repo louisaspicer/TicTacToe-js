@@ -22,6 +22,7 @@
       if (this.board.fields[0] !== null) {
         if (self.board.fields[0] ===
           self.board.fields[1] &&
+          self.board.fields[1] ===
           self.board.fields[2]) {
            return self.board.fields[0];
         }
@@ -32,6 +33,7 @@
       if (this.board.fields[3] !== null) {
         if (self.board.fields[3] ===
           self.board.fields[4] &&
+          self.board.fields[4] ===
           self.board.fields[5]) {
            return self.board.fields[3];
           }
@@ -42,6 +44,7 @@
       if (this.board.fields[6] !== null) {
         if (self.board.fields[6] ===
           self.board.fields[7] &&
+          self.board.fields[7] ===
           self.board.fields[8]) {
            return self.board.fields[6];
           }
@@ -52,6 +55,7 @@
       if (this.board.fields[0] !== null) {
         if (self.board.fields[0] ===
           self.board.fields[3] &&
+          self.board.fields[3] ===
           self.board.fields[6]) {
            return this.board.fields[0];
           }
@@ -62,6 +66,7 @@
       if (this.board.fields[1] !== null) {
         if (self.board.fields[1] ===
           self.board.fields[4] &&
+          self.board.fields[4] ===
           self.board.fields[7]) {
            return self.board.fields[1];
           }
@@ -72,6 +77,7 @@
       if (this.board.fields[2] !== null) {
         if (self.board.fields[2] ===
           self.board.fields[5] &&
+          self.board.fields[5] ===
           self.board.fields[8]) {
            return self.board.fields[2];
           }
@@ -82,6 +88,7 @@
       if (this.board.fields[0] !== null) {
         if (self.board.fields[0] ===
           self.board.fields[4] &&
+          self.board.fields[4] ===
           self.board.fields[8]) {
            return self.board.fields[0];
           }
@@ -92,6 +99,7 @@
       if (this.board.fields[2] !== null) {
         if (self.board.fields[2] ===
           self.board.fields[4] &&
+          self.board.fields[4] ===
           self.board.fields[6]) {
            return self.board.fields[2];
           }

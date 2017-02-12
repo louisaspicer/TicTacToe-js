@@ -71,9 +71,9 @@
       console.log(type);
       if (type !== undefined) {
         if (type === this.playerOne.type) {
-          console.log("Player 1 is the winner!");
+          alert("Player 1 is the winner!");
         } else {
-          console.log("Player 2 is the winner!");
+          alert("Player 2 is the winner!");
         }
       }
     },
