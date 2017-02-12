@@ -8,10 +8,12 @@
 
     addMarkerToBoard: function(marker, id) {
       element = document.createElement("h1");
+      center = document.createElement("center");
       text = document.createTextNode(marker);
       element.appendChild(text);
+      center.appendChild(element);
       field = document.getElementById(id);
-      field.appendChild(element);
+      field.appendChild(center);
     },
 
     makeBoardAppear: function() {

@@ -52,7 +52,6 @@
     playTurn: function(id) {
       var self = this;
       if (self.playerOne.turn) {
-        console.log(self.playerOne.name)
         self.gameView.showNextPlayerName(self.playerTwo.name);
         self.playerOne.playTurn(id, this.board);
         self.playerOne.turn = false;
@@ -68,12 +67,13 @@
     },
 
     _runChecks: function() {
-      if (this.gameChecker.runChecks() !== undefined) {
-        var type = this.gameChecker.runChecks();
+      var type = this.gameChecker.runChecks();
+      console.log(type);
+      if (type !== undefined) {
         if (type === this.playerOne.type) {
           console.log("Player 1 is the winner!");
         } else {
-          console.log("Player 1 is the winner!");
+          console.log("Player 2 is the winner!");
         }
       }
     },
